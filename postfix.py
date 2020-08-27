@@ -1,4 +1,3 @@
-from os import system,name
 def chek_brac(s):
     c=0
     for i in s:
@@ -9,11 +8,6 @@ def chek_brac(s):
         if c<0:
             return 0
     return 0 if c else 1
-def clear():
-    if name=='nt':
-        _ = system('cls')
-    else:
-        _ = system('clear')
 s=input("Enter an infix expression: ")
 stack=[]
 op=[]
@@ -55,4 +49,6 @@ while(len(stack)>0):
     stack.pop(-1)
 a,b="".join(stack),"".join(op)
 print("   "+" "*19+a+" "*(18-len(a))+b)
+print("Infix expression :",s)
+print("Postfix expression :",b)
     
